@@ -1,0 +1,41 @@
+开发环境：Windows 10，Tomcat8.0，JDK 1.8
+
+开发工具：idea / sts / eclipse
+
+技术选型：
+
+前端：构建页面HTML5 + CSS + Layui调用Vue + axios / jQuery + ajax / Layui
+后端：SpringBoot SpringCloud MybatisPlus JWT/shiro/SpringSecurity Swagger
+缓存：Redis
+数据库：Mysql
+第三方接口：短信验证支付..
+
+
+项目结构
+hospital-management-system
+|
+├──hms-common --通用包
+|
+├──hms-springcloud-config --cloud统一配置中心
+|
+├──hms-eureka --注册中心
+|
+├──hms-gateway --网关
+|
+├──hms-server-api--服务api模块
+|
+├──hms-outpatient-service --门诊服务
+|
+├──hms-isHospital-service --住院服务
+|
+├──hms-permission-service --菜单服务
+|
+├──hms-graph-service --统计服务
+|
+├──hms-data-service --数据服务
+|
+├──hms-scheduling-service --排班服务
+|
+├──hms-warehouse-service --仓库服务
+|
+├──hms-pharmacy-service --药房服务
