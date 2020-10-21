@@ -20,10 +20,10 @@ import java.util.ArrayList;
 public class CodeGeneratorUtil {
 
     /**
-     * @param name      开发人员
-     * @param sqlName   数据库名
-     * @param sqlPwd    数据密码
-     * @param outPudDir 生成路径
+     * @param name      开发人员 如：类名上面的注释会加上你所输入的值
+     * @param sqlName   数据库名 如;root
+     * @param sqlPwd    数据密码 如:root
+     * @param outPudDir 生成路径 如：绝对路径 D:\mybatis\hospital-management-system\hms-common\src\main\java\com\hms
      * @param table     表名
      */
     public static void getCodeGenerator(String name, String sqlName, String sqlPwd, String outPudDir, String table) {
