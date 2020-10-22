@@ -35,7 +35,7 @@
         <!--druid数据源-->
         <druid.version>1.1.21</druid.version>
         <!--MySQL-->
-        <mysql.version>5.1.47</mysql.version>
+        <mysql.version>8.0.21</mysql.version>
         <!-- 下面三个基本是微服务架构的标配 -->
         <spring.boot>2.3.3.RELEASE</spring.boot>
         <spring.cloud>Hoxton.SR8</spring.cloud>

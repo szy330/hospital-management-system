@@ -49,8 +49,8 @@ public class CodeGeneratorUtil {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setDriverName("com.mysql.jdbc.Driver");
-        dsc.setUrl("jdbc:mysql://localhost:3306/hms");
+        dsc.setDriverName("com.mysql.cj.jdbc.Driver");
+        dsc.setUrl("jdbc:mysql://localhost:3306/hms?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8");
         dsc.setUsername(sqlName);
         dsc.setPassword(sqlPwd);
         dsc.setDbType(DbType.MYSQL);
@@ -68,7 +68,7 @@ public class CodeGeneratorUtil {
         pc.setService("service");
         pc.setServiceImpl("service.impl");
         pc.setMapper("mapper");
-        pc.setXml("classpath:mapper");
+        pc.setXml("mapper");
         mpg.setPackageInfo(pc);
 
         // 策略配置
