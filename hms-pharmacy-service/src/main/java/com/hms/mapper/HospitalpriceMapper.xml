@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hms.mapper.HospitalpriceMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.hms.pojo.Hospitalprice">
+        <id column="hospitalpriceid" property="hospitalpriceid" />
+        <result column="registerId" property="registerId" />
+        <result column="durgname" property="durgname" />
+        <result column="durgnum" property="durgnum" />
+        <result column="repiceprice" property="repiceprice" />
+        <result column="repicetotal" property="repicetotal" />
+        <result column="htime" property="htime" />
+        <result column="state" property="state" />
+    </resultMap>
+
+</mapper>

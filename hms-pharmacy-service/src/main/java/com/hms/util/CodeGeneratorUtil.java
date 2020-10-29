@@ -18,7 +18,12 @@ import java.util.ArrayList;
  * 代码生成器
  */
 public class CodeGeneratorUtil {
+    public static void main(String[] args) {
 
+        getCodeGenerator
+                ("szy","root","root",
+                        "J:\\Per\\hospital-management-system\\hms-pharmacy-service\\src\\main\\java","hospitalprice");
+    }
     /**
      * @param name      开发人员 如：类名上面的注释会加上你所输入的值
      * @param sqlName   数据库名 如;root
@@ -87,7 +92,7 @@ public class CodeGeneratorUtil {
         // 设置创建时间和更新时间自动填充策略
         TableFill created_date = new TableFill("created_date", FieldFill.INSERT);
         TableFill updated_date = new TableFill("updated_date", FieldFill.INSERT_UPDATE);
-        ArrayList<TableFill> tableFills = new ArrayList<TableFill>();
+        ArrayList<TableFill> tableFills = new ArrayList<>();
         tableFills.add(created_date);
         tableFills.add(updated_date);
         strategy.setTableFillList(tableFills);
