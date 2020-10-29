@@ -21,8 +21,8 @@ public class CodeGeneratorUtil {
     public static void main(String[] args) {
 
         getCodeGenerator
-                ("szy","root","root",
-                        "J:\\Per\\hospital-management-system\\hms-pharmacy-service\\src\\main\\java","hospitalprice");
+                ("szy","root","Songzhiyong1115!",
+                        "D:\\Per\\hospital-management-system\\hms-pharmacy-service\\src\\main\\java","hospitalprice");
     }
     /**
      * @param name      开发人员 如：类名上面的注释会加上你所输入的值
