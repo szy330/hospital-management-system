@@ -9,7 +9,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @SpringBootApplication
 @MapperScan("com.hms.mapper")
 @EnableDiscoveryClient
-//解决跨域问题
 @EnableSwagger2
 public class PharmacyMain {
     public static void main(String[] args) {
