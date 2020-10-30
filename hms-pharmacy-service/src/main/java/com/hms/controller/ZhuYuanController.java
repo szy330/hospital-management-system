@@ -34,7 +34,7 @@ public class ZhuYuanController {
             return result;
         }
         QueryWrapper<Register> registerQueryWrapper = new QueryWrapper<>();
-        //如果出院住院状态有改变就改下面这个，看人家怎么定的
+        //出院住院状态
         //registerQueryWrapper.eq("state",2);
         registerQueryWrapper.eq("state",2);
         registerQueryWrapper.eq("registerid",registerid);
@@ -49,12 +49,12 @@ public class ZhuYuanController {
         result.put("info",registerList.get(0));
         QueryWrapper<Hospitalprice> hospitalpriceQueryWrapper = new QueryWrapper<>();
         hospitalpriceQueryWrapper.eq("registerId",registerid);
-        hospitalpriceQueryWrapper.eq("state",0);//这个应该是交钱没拿药的
+        hospitalpriceQueryWrapper.eq("state",0);//交钱没拿药的
         List<Hospitalprice> hospitalpricedaiqu = hospitalpriceMapper.selectList(hospitalpriceQueryWrapper);
         result.put("daiqu",hospitalpricedaiqu);
         hospitalpriceQueryWrapper = new QueryWrapper<>();
         hospitalpriceQueryWrapper.eq("registerId",registerid);
-        hospitalpriceQueryWrapper.eq("state",2);//这个应该是取了的
+        hospitalpriceQueryWrapper.eq("state",2);//已取药的
         List<Hospitalprice> hospitalpriceList = hospitalpriceMapper.selectList(hospitalpriceQueryWrapper);
         result.put("yiqu",hospitalpriceList);
         return result;
@@ -70,11 +70,11 @@ public class ZhuYuanController {
         }
         QueryWrapper<Hospitalprice> hospitalpriceQueryWrapper = new QueryWrapper<>();
         hospitalpriceQueryWrapper.eq("registerId",registerid);
-        hospitalpriceQueryWrapper.eq("state",0);//这个应该是交钱没拿药的
+        hospitalpriceQueryWrapper.eq("state",0);//交钱没拿药的
         List<Hospitalprice> hospitalpricedaiqu = hospitalpriceMapper.selectList(hospitalpriceQueryWrapper);
         for (Hospitalprice h:hospitalpricedaiqu
              ) {
-            h.setState(2);//就是改个状态
+            h.setState(2);//状态码
             hospitalpriceMapper.updateById(h);
         }
         result.put("msg","ok");

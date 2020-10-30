@@ -37,7 +37,7 @@ public class MengZhenController {
         }
         QueryWrapper<Cashier> cashierQueryWrapper = new QueryWrapper<>();
         cashierQueryWrapper.eq("reportId",reportID);
-        //2可能是挂号交了钱的
+        //2是挂号交了钱的
         cashierQueryWrapper.eq("state",2);
         List<Cashier> cashierList  = cashierMapper.selectList(cashierQueryWrapper);
         result.put("code",200);
@@ -73,7 +73,7 @@ public class MengZhenController {
         QueryWrapper<Cashier> cashierQueryWrapper = new QueryWrapper<>();
         cashierQueryWrapper.eq("reportId",reportID);
         List<Cashier> cashierList  = cashierMapper.selectList(cashierQueryWrapper);
-        //改report表的状态，把state改成3，应该是已经取药了，cashier表里面没有变化。应该是要同步改状态的，不是的话，cashier相关的都注释了就行
+        //改report表的状态，把state改成3，应该是已经取药了，cashier表里面没有变化。应该是要同步改状态的，不是的话，cashier相关的都注释了
         for (Cashier c:cashierList
              ) {
             c.setState(3);
